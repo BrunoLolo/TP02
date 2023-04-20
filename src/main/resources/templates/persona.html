@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>BRUNO MOLLO</title>
+</head>
+<body>
+	<form th:object="${persona}" th:action="@{/listarPersonas}" method="post">
+		<label for="fnomb">Nombre: </label> <br>
+		<input type="text" id="fnomb" th:field="*{nombres}"><br>
+		<label for="fapell">Apellido: </label><br>
+		<input type="text" id="fapell" th:field="*{apellidos}"><br>
+		<label for="ffechanac">Fecha de Nacimiento: </label><br>
+		<input type="date" id="ffechanac" th:field="*{fechaNaci}"><br>
+		<input type="submit" value="ENVIAR">
+		
+	</form>
+</body>
+</html>
